@@ -37,6 +37,10 @@ def year2015():
     
     year2015 = list(np.ravel(results))
 
+    print(year2015)
+    with open("year2015.json", "w") as outfile:
+        json.dump(year2015, outfile)
+    
     return jsonify(year2015)
 
 @app.route("/api/v1.0/year2016")
@@ -48,6 +52,10 @@ def year2016():
     results = cur.fetchall()
     
     year2016 = list(np.ravel(results))
+
+    print(year2016)
+    with open("year2016.json", "w") as outfile:
+        json.dump(year2016, outfile)
 
     return jsonify(year2016)
 
@@ -61,6 +69,10 @@ def year2017():
     
     year2017 = list(np.ravel(results))
 
+    print(year2017)
+    with open("year2017.json", "w") as outfile:
+        json.dump(year2017, outfile)
+
     return jsonify(year2017)
 
 @app.route("/api/v1.0/year2018")
@@ -72,6 +84,10 @@ def year2018():
     results = cur.fetchall()
     
     year2018 = list(np.ravel(results))
+
+    print(year2018)
+    with open("year2018.json", "w") as outfile:
+        json.dump(year2018, outfile)
 
     return jsonify(year2018)
 
@@ -85,8 +101,11 @@ def year2019():
     
     year2019 = list(np.ravel(results))
 
-    return jsonify(year2019)
+    print(year2019)
+    with open("year2019.json", "w") as outfile:
+        json.dump(year2019, outfile)
 
+    return jsonify(year2019)
 
 if __name__ == '__main__':
     app.run(debug=True)
