@@ -33,8 +33,10 @@ def year2015():
     cur = conn.cursor()
     cur.execute('''SELECT * FROM year_2015;''')
 
-    results = cur.fetchall()
-    
+    columns = cur.description 
+
+    results = [{columns[index][0]:column for index, column in enumerate(value)} for value in cur.fetchall()]
+
     year2015 = list(np.ravel(results))
 
     print(year2015)
@@ -49,7 +51,9 @@ def year2016():
     cur = conn.cursor()
     cur.execute('''SELECT * FROM year_2016;''')
 
-    results = cur.fetchall()
+    columns = cur.description 
+
+    results = [{columns[index][0]:column for index, column in enumerate(value)} for value in cur.fetchall()]
     
     year2016 = list(np.ravel(results))
 
@@ -65,8 +69,10 @@ def year2017():
     cur = conn.cursor()
     cur.execute('''SELECT * FROM year_2017;''')
 
-    results = cur.fetchall()
-    
+    columns = cur.description 
+
+    results = [{columns[index][0]:column for index, column in enumerate(value)} for value in cur.fetchall()]
+
     year2017 = list(np.ravel(results))
 
     print(year2017)
@@ -81,8 +87,10 @@ def year2018():
     cur = conn.cursor()
     cur.execute('''SELECT * FROM year_2018;''')
 
-    results = cur.fetchall()
-    
+    columns = cur.description 
+
+    results = [{columns[index][0]:column for index, column in enumerate(value)} for value in cur.fetchall()]
+  
     year2018 = list(np.ravel(results))
 
     print(year2018)
@@ -97,7 +105,9 @@ def year2019():
     cur = conn.cursor()
     cur.execute('''SELECT * FROM year_2019;''')
 
-    results = cur.fetchall()
+    columns = cur.description 
+
+    results = [{columns[index][0]:column for index, column in enumerate(value)} for value in cur.fetchall()]
     
     year2019 = list(np.ravel(results))
 
