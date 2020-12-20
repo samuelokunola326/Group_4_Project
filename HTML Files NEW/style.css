@@ -1,0 +1,30 @@
+
+body {
+    background: #ADD8E6;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.text-center {
+    font-family: 'Lobster';
+}
+
+
+hr  {  
+  width: 80%;  
+  height: 2px;  
+  color: gray;  
+  margin-bottom: 25px;  
+  margin-right: auto;  
+  margin-left: auto;  
+  margin-top: 9px;  
+  border-width: 4px;  
+  }  
+
+  .box {
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+    color: #fff;
+    background: deepskyblue;
+  }
