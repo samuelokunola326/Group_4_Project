@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-           from flask import Flask, render_template, redirect
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.sql import text
-
-import os
-# check for environment variable
-if not os.getenv("DATABASE_URL"):
-    raise RuntimeError("DATABASE_URL is not set")
-=======
 import os
 import datetime as dt
 import pandas as pd
@@ -17,36 +7,10 @@ import numpy as np
 import json
 from flask import Flask, jsonify  
 
->>>>>>> e9196c06ed7c97ad9f73bc1022a510be3932f7e8
-
 app = Flask(__name__)
 
-# change to name of your database; add path if necessary
 db_name = 'world_happiness_index'
 
-<<<<<<< HEAD
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://'postgres://postgres:Puca!0125*@localhost:5432/world_happiness_index"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-
-# this variable, db, will be used for all SQLAlchemy commands
-db = SQLAlchemy(app)
-
-# NOTHING BELOW THIS LINE NEEDS TO CHANGE
-# this route will test the database connection and nothing more
-@app.route('/')
-def testdb():
-    try:
-        db.session.query('1').from_statement(text('SELECT 1')).all()
-        return '<h1>It works.</h1>'
-    except Exception as e:
-        # e holds description of the error
-        error_text = "<p>The error:<br>" + str(e) + "</p>"
-        hed = '<h1>Something is broken.</h1>'
-        return hed + error_text
-
-if __name__ == '__main__':
-    app.run(debug=True)
-=======
 conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "password", host = "127.0.0.1", port = "5432")
 
 @app.route("/")
@@ -54,12 +18,17 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"/api/v1.0/year2015<br/>"
+        f"/api/v1.0/World Happiness Report<br/>"
+        f"/api/v1.0/year_2015<br/>"
         f"/api/v1.0/year2016<br/>"
         f"/api/v1.0/year2017<br/>"
         f"/api/v1.0/year2018<br/>"
-        f"/api/v1.0/year2019<br/>"
+        f"/api/v1.0/year2019<br/>"   
     )
+
+@app.route("/api/v1.0/World Happiness Report")
+def index(): 
+    return render_template("index.html")
 
 @app.route("/api/v1.0/year2015")
 def year2015():
@@ -151,6 +120,7 @@ def year2019():
 
     return jsonify(year2019)
 
+
+
 if __name__ == '__main__':
     app.run(debug=True)
->>>>>>> e9196c06ed7c97ad9f73bc1022a510be3932f7e8
