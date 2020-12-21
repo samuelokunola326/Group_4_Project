@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 db_name = 'world_happiness_index'
 
-conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "Puca!0125", host = "127.0.0.1", port = "5432")
+conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "password", host = "127.0.0.1", port = "5432")
 
 @app.route("/")
 def welcome():
