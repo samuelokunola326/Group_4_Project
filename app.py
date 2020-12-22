@@ -7,10 +7,8 @@ import numpy as np
 import json
 from flask import Flask, jsonify  
 
-
 app = Flask(__name__)
 
-# change to name of your database; add path if necessary
 db_name = 'world_happiness_index'
 
 conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "password", host = "127.0.0.1", port = "5432")
@@ -20,12 +18,17 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"/api/v1.0/year2015<br/>"
+        f"/api/v1.0/World Happiness Report<br/>"
+        f"/api/v1.0/year_2015<br/>"
         f"/api/v1.0/year2016<br/>"
         f"/api/v1.0/year2017<br/>"
         f"/api/v1.0/year2018<br/>"
-        f"/api/v1.0/year2019<br/>"
+        f"/api/v1.0/year2019<br/>"   
     )
+
+@app.route("/api/v1.0/World Happiness Report")
+def index(): 
+    return render_template("index.html")
 
 @app.route("/api/v1.0/year2015")
 def year2015():
@@ -116,6 +119,8 @@ def year2019():
         json.dump(year2019, outfile)
 
     return jsonify(year2019)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
