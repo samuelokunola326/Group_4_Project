@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 db_name = 'world_happiness_index'
 
-conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "password", host = "127.0.0.1", port = "5432")
+conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "Puca!0125", host = "127.0.0.1", port = "5432")
 
 @app.route("/")
 def welcome():
@@ -19,6 +19,7 @@ def welcome():
     return (
         f"Available Routes:<br/>"
         f"/api/v1.0/World Happiness Report<br/>"
+        f"/api/v1.0/Top Five & Bottom Five Map<br/>"
         f"/api/v1.0/year_2015<br/>"
         f"/api/v1.0/year2016<br/>"
         f"/api/v1.0/year2017<br/>"
@@ -29,6 +30,10 @@ def welcome():
 @app.route("/api/v1.0/World Happiness Report")
 def index(): 
     return render_template("index.html")
+
+@app.route("/api/v1.0/Top Five & Bottom Five Map")
+def map(): 
+    return render_template("map.html")
 
 @app.route("/api/v1.0/year2015")
 def year2015():
