@@ -216,6 +216,16 @@ console.log(bottom5_2019);
 
 // #####################################################################################
 
+// object for red marker for bottom 5 
+var redMarker = L.icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
 // adding markers for top 5 2015
 
 
@@ -234,7 +244,6 @@ console.log(bottom5_2019);
   var can15 = L.marker([top5_2015[4]["lat"], 
   top5_2015[4]["lng"]]).bindPopup("<h1>" + top5_2015[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2015[4]["happiness_rank"] + "</h3>")
 
-  // var c15 = L.layerGroup([switz15, ice15, den15, nor15, can15]);
 
 
 // #####################################################################################
@@ -242,21 +251,21 @@ console.log(bottom5_2019);
 // adding markers for bottom 5 2015
 
   var togo15 = L.marker([bottom5_2015[0]["lat"], 
-  bottom5_2015[0]["lng"]]).bindPopup("<h1>" + bottom5_2015[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[0]["happiness_rank"] + "</h3>")
+  bottom5_2015[0]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2015[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[0]["happiness_rank"] + "</h3>")
 
   var Buru15 = L.marker([bottom5_2015[1]["lat"], 
-  bottom5_2015[1]["lng"]]).bindPopup("<h1>" + bottom5_2015[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[1]["happiness_rank"] + "</h3>")
+  bottom5_2015[1]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2015[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[1]["happiness_rank"] + "</h3>")
 
   var syr15 = L.marker([bottom5_2015[2]["lat"], 
-  bottom5_2015[2]["lng"]]).bindPopup("<h1>" + bottom5_2015[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[2]["happiness_rank"] + "</h3>")
+  bottom5_2015[2]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2015[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[2]["happiness_rank"] + "</h3>")
 
   var ben15 = L.marker([bottom5_2015[3]["lat"], 
-  bottom5_2015[3]["lng"]]).bindPopup("<h1>" + bottom5_2015[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[3]["happiness_rank"] + "</h3>")
+  bottom5_2015[3]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2015[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[3]["happiness_rank"] + "</h3>")
 
   var rwa15 = L.marker([bottom5_2015[4]["lat"], 
-  bottom5_2015[4]["lng"]]).bindPopup("<h1>" + bottom5_2015[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[4]["happiness_rank"] + "</h3>")
+  bottom5_2015[4]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2015[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2015[4]["happiness_rank"] + "</h3>")
 
-  var c15 = L.layerGroup([switz15, ice15, den15, nor15, can15, togo15, Buru15, syr15, rwa15]);
+  var c15 = L.layerGroup([switz15, ice15, den15, nor15, can15, togo15, Buru15, ben15, syr15, rwa15]);
   
 
 // #####################################################################################
@@ -279,7 +288,6 @@ console.log(bottom5_2019);
   var fin16 = L.marker([top5_2016[4]["lat"], 
   top5_2016[4]["lng"]]).bindPopup("<h1>" + top5_2016[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2016[4]["happiness_rank"] + "</h3>")
 
-  // var c15 = L.layerGroup([switz15, ice15, den15, nor15, can15]);
 
 
 // #####################################################################################
@@ -287,21 +295,150 @@ console.log(bottom5_2019);
 // adding markers for bottom 5 2016
 
   var togo16 = L.marker([bottom5_2016[0]["lat"], 
-  bottom5_2016[0]["lng"]]).bindPopup("<h1>" + bottom5_2016[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[0]["happiness_rank"] + "</h3>")
+  bottom5_2016[0]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2016[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[0]["happiness_rank"] + "</h3>")
 
   var Buru16 = L.marker([bottom5_2015[1]["lat"], 
-  bottom5_2016[1]["lng"]]).bindPopup("<h1>" + bottom5_2016[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[1]["happiness_rank"] + "</h3>")
+  bottom5_2016[1]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2016[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[1]["happiness_rank"] + "</h3>")
 
   var syr16 = L.marker([bottom5_2016[2]["lat"], 
-  bottom5_2016[2]["lng"]]).bindPopup("<h1>" + bottom5_2016[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[2]["happiness_rank"] + "</h3>")
+  bottom5_2016[2]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2016[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[2]["happiness_rank"] + "</h3>")
 
   var benin16 = L.marker([bottom5_2016[3]["lat"], 
-  bottom5_2016[3]["lng"]]).bindPopup("<h1>" + bottom5_2016[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[3]["happiness_rank"] + "</h3>")
+  bottom5_2016[3]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2016[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[3]["happiness_rank"] + "</h3>")
 
   var afg16 = L.marker([bottom5_2016[4]["lat"], 
-  bottom5_2016[4]["lng"]]).bindPopup("<h1>" + bottom5_2016[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[4]["happiness_rank"] + "</h3>")
+  bottom5_2016[4]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2016[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2016[4]["happiness_rank"] + "</h3>")
 
   var c16 = L.layerGroup([switz16, ice16, den16, nor16, fin16, benin16, togo16, Buru16, syr16, afg16]);
+
+  // #####################################################################################
+
+  // adding markers for top 5 2017
+
+
+  var nor17 = L.marker([top5_2017[0]["lat"], 
+  top5_2017[0]["lng"]]).bindPopup("<h1>" + top5_2017[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2017[0]["happiness_rank"] + "</h3>")
+
+  var den17 = L.marker([top5_2017[1]["lat"], 
+  top5_2017[1]["lng"]]).bindPopup("<h1>" + top5_2017[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2017[1]["happiness_rank"] + "</h3>")
+
+  var ice17 = L.marker([top5_2017[2]["lat"], 
+  top5_2017[2]["lng"]]).bindPopup("<h1>" + top5_2017[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2017[2]["happiness_rank"] + "</h3>")
+
+  var switz17 = L.marker([top5_2017[3]["lat"], 
+  top5_2017[3]["lng"]]).bindPopup("<h1>" + top5_2017[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2017[3]["happiness_rank"] + "</h3>")
+
+  var fin17 = L.marker([top5_2017[4]["lat"], 
+  top5_2017[4]["lng"]]).bindPopup("<h1>" + top5_2017[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2017[4]["happiness_rank"] + "</h3>")
+
+
+
+// #####################################################################################
+
+// adding markers for bottom 5 2017
+
+  var buru17 = L.marker([bottom5_2017[0]["lat"], 
+  bottom5_2017[0]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2017[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2017[0]["happiness_rank"] + "</h3>")
+
+  var tan17 = L.marker([bottom5_2017[1]["lat"], 
+  bottom5_2017[1]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2017[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2017[1]["happiness_rank"] + "</h3>")
+
+  var syra17 = L.marker([bottom5_2017[2]["lat"], 
+  bottom5_2017[2]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2017[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2017[2]["happiness_rank"] + "</h3>")
+
+  var rwa17 = L.marker([bottom5_2017[3]["lat"], 
+  bottom5_2017[3]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2017[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2017[3]["happiness_rank"] + "</h3>")
+
+  var togo17 = L.marker([bottom5_2017[4]["lat"], 
+  bottom5_2017[4]["lng"]],{icon: redMarker}).bindPopup("<h1>" + bottom5_2017[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2017[4]["happiness_rank"] + "</h3>")
+
+  var c17 = L.layerGroup([switz17, ice17, den17, nor17, fin17, tan17, rwa17, buru17, togo17, syra17, togo17]);
+
+    // #####################################################################################
+
+  // adding markers for top 5 2018
+
+
+  var fin18 = L.marker([top5_2018[0]["lat"], 
+  top5_2018[0]["lng"]]).bindPopup("<h1>" + top5_2018[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2018[0]["happiness_rank"] + "</h3>")
+
+  var nor18 = L.marker([top5_2018[1]["lat"], 
+  top5_2018[1]["lng"]]).bindPopup("<h1>" + top5_2018[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2018[1]["happiness_rank"] + "</h3>")
+
+  var den18 = L.marker([top5_2018[2]["lat"], 
+  top5_2018[2]["lng"]]).bindPopup("<h1>" + top5_2018[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2018[2]["happiness_rank"] + "</h3>")
+
+  var ice18 = L.marker([top5_2018[3]["lat"], 
+  top5_2018[3]["lng"]]).bindPopup("<h1>" + top5_2018[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2018[3]["happiness_rank"] + "</h3>")
+
+  var switz18 = L.marker([top5_2018[4]["lat"], 
+  top5_2018[4]["lng"]]).bindPopup("<h1>" + top5_2018[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2018[4]["happiness_rank"] + "</h3>")
+
+
+
+// #####################################################################################
+
+// adding markers for bottom 5 2018
+
+  var buru18 = L.marker([bottom5_2018[0]["lat"], 
+  bottom5_2018[0]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2018[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2018[0]["happiness_rank"] + "</h3>")
+
+  var tan18 = L.marker([bottom5_2018[1]["lat"], 
+  bottom5_2018[1]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2018[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2018[1]["happiness_rank"] + "</h3>")
+
+  var yem18 = L.marker([bottom5_2018[2]["lat"], 
+  bottom5_2018[2]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2018[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2018[2]["happiness_rank"] + "</h3>")
+
+  var rwa18 = L.marker([bottom5_2018[3]["lat"], 
+  bottom5_2018[3]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2018[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2018[3]["happiness_rank"] + "</h3>")
+
+  var syr18 = L.marker([bottom5_2018[4]["lat"], 
+  bottom5_2018[4]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2018[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2018[4]["happiness_rank"] + "</h3>")
+
+  var c18 = L.layerGroup([switz18, ice18, den18, nor18, fin18, buru18, tan18, yem18, rwa18, syr18]);
+
+    // #####################################################################################
+
+  // adding markers for top 5 2019
+
+
+  var den19 = L.marker([top5_2019[0]["lat"], 
+  top5_2019[0]["lng"]]).bindPopup("<h1>" + top5_2019[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2019[0]["happiness_rank"] + "</h3>")
+
+  var neth19 = L.marker([top5_2019[1]["lat"], 
+  top5_2019[1]["lng"]]).bindPopup("<h1>" + top5_2019[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2019[1]["happiness_rank"] + "</h3>")
+
+  var ice19 = L.marker([top5_2019[2]["lat"], 
+  top5_2019[2]["lng"]]).bindPopup("<h1>" + top5_2019[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2019[2]["happiness_rank"] + "</h3>")
+
+  var nor19 = L.marker([top5_2019[3]["lat"], 
+  top5_2019[3]["lng"]]).bindPopup("<h1>" + top5_2019[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2019[3]["happiness_rank"] + "</h3>")
+
+  var fin19 = L.marker([top5_2019[4]["lat"], 
+  top5_2019[4]["lng"]]).bindPopup("<h1>" + top5_2019[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2019[4]["happiness_rank"] + "</h3>")
+
+
+
+// #####################################################################################
+
+// adding markers for bottom 5 2019
+
+  var tan19 = L.marker([bottom5_2019[0]["lat"], 
+  bottom5_2019[0]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2019[0]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2019[0]["happiness_rank"] + "</h3>")
+
+  var rwa19 = L.marker([bottom5_2019[1]["lat"], 
+  bottom5_2019[1]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2019[1]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2019[1]["happiness_rank"] + "</h3>")
+
+  var yem19 = L.marker([bottom5_2019[2]["lat"], 
+  bottom5_2019[2]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2019[2]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2019[2]["happiness_rank"] + "</h3>")
+
+  var mal19 = L.marker([bottom5_2019[3]["lat"], 
+  bottom5_2019[3]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2019[3]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2019[3]["happiness_rank"] + "</h3>")
+
+  var afg19 = L.marker([bottom5_2019[4]["lat"], 
+  bottom5_2019[4]["lng"]], {icon: redMarker}).bindPopup("<h1>" + bottom5_2019[4]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + bottom5_2019[4]["happiness_rank"] + "</h3>")
+
+  var c19 = L.layerGroup([neth19, ice19, den19, nor19, fin19, tan19, rwa19, yem19, mal19, afg19]);
 
   
 
@@ -315,7 +452,10 @@ var baseMaps = {
 
 var overlayMaps = {
   "c15": c15,
-  "c16": c16
+  "c16": c16,
+  "c17": c17,
+  "c18": c18,
+  "c19": c19
 }
 
 L.control.layers(baseMaps, overlayMaps).addTo(myMap);
