@@ -1,5 +1,5 @@
-api_key = "AIzaSyCbsmrAu36WZEhGUVsDeixDThmSHR7gMbs"
-password = "Getbig2015@"
+api_key = "YOUR GOOGLE MAPS API"
+password = "YOUR POSTGRE PASSWORD"
 
 
 

@@ -443,13 +443,12 @@ var redMarker = L.icon({
   
 
 
-
-//  var cd = makerlocation(top5_2015);
-
+// object for base map 
 var baseMaps = {
   "initLayer": initLayer
 }
 
+// tilelayer for country markers 
 var overlayMaps = {
   "c15": c15,
   "c16": c16,
@@ -460,32 +459,5 @@ var overlayMaps = {
 
 L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 
-
-
-// Loop through the cities array and create one marker for each city object
-// for (var i = 0; i < top5_2015.length; i++) {
-
-//   var m = L.marker([top5_2015[i]["lat"], 
-//   top5_2015[i]["lng"]]).bindPopup("<h1>" + top5_2015[i]["country"] + "</h1> <hr> <h3>Happiness_Rank: " + top5_2015[i]["happiness_rank"] + "</h3>")
-
-//   // Conditionals for happiness points
-//   var color = "";
-//   if (top5_2015[i]["happiness_rank"] < 10) {
-//     color = "green";
-//   }
-
-//   else {
-//     color = "Yellow";
-//   }
-
-// //   // Add circles to map
-//   L.circle(loc[i], {
-//     fillOpacity: 0.75,
-//     color: "white",
-//     fillColor: color,
-//     // Adjust radius
-//     radius: top5_2015[i].happiness_rank * 150
-//   }).bindPopup("<h1>" + top5_2015[i]["country"] + "</h1> <hr> <h3>Points: " + top5_2015[i]["happiness_rank"] + "</h3>").addTo(myMap);
-// }
 
 
