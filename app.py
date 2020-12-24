@@ -5,13 +5,14 @@ from flask import Flask, render_template, redirect
 import psycopg2
 import numpy as np
 import json
-from flask import Flask, jsonify  
+from flask import Flask, jsonify
+from config import password
 
 app = Flask(__name__)
 
 db_name = 'world_happiness_index'
 
-conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = "Puca!0125", host = "127.0.0.1", port = "5432")
+conn = psycopg2.connect(database="world_happiness_index", user = "postgres", password = password, host = "127.0.0.1", port = "5432")
 
 @app.route("/")
 def welcome():
